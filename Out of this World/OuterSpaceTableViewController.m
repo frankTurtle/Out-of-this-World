@@ -32,15 +32,17 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 3;
+    if (section == 0) {
+        return 3;
+    }
+    else
+        return 2;
 }
 
 
@@ -50,6 +52,14 @@
     // Configure the cell...
     
     cell.textLabel.text = [NSString stringWithFormat:@"Row %li", (long)indexPath.row];
+    
+    if (indexPath.section == 0) {
+        cell.backgroundColor = [UIColor redColor];
+    }
+    else
+    {
+        cell.backgroundColor = [UIColor blueColor];
+    }
     
     return cell;
 }
