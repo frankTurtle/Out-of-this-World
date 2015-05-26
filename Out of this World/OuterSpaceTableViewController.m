@@ -22,6 +22,19 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self.planets = [[NSMutableArray alloc] init];
+    
+    NSString *planet1 = @"Mercury";
+    NSString *planet2 = @"Venus";
+    NSString *planet3 = @"Earth";
+    NSString *planet4 = @"Uranus";
+    
+    [self.planets addObject:planet1];
+    [self.planets addObject:planet2];
+    [self.planets addObject:planet3];
+    [self.planets addObject:planet4];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,16 +46,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 2;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    if (section == 0) {
-        return 3;
-    }
-    else
-        return 2;
+    return [self.planets count];
 }
 
 
@@ -51,7 +60,7 @@
     
     // Configure the cell...
     
-    cell.textLabel.text = [NSString stringWithFormat:@"Row %li", (long)indexPath.row];
+    cell.textLabel.text = [self.planets objectAtIndex:indexPath.row];
     
     if (indexPath.section == 0) {
         cell.backgroundColor = [UIColor redColor];
