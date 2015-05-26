@@ -49,7 +49,7 @@
     
     // Configure the cell...
     
-    cell.textLabel.text = @"woah ... my first tableview";
+    cell.textLabel.text = [NSString stringWithFormat:@"Row %li", (long)indexPath.row];
     
     return cell;
 }
