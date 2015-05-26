@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  OuterSpaceTableViewController.h
 //  Out of this World
 //
 //  Created by OSX on 5/26/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface OuterSpaceTableViewController : UITableViewController
 
 @end
-

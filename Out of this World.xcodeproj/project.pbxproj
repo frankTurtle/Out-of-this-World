@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		10F8E9851B14B95F00802733 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F8E9841B14B95F00802733 /* main.m */; };
 		10F8E9881B14B95F00802733 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F8E9871B14B95F00802733 /* AppDelegate.m */; };
-		10F8E98B1B14B95F00802733 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F8E98A1B14B95F00802733 /* ViewController.m */; };
 		10F8E98E1B14B95F00802733 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10F8E98C1B14B95F00802733 /* Main.storyboard */; };
 		10F8E9901B14B95F00802733 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10F8E98F1B14B95F00802733 /* Images.xcassets */; };
 		10F8E9931B14B95F00802733 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10F8E9911B14B95F00802733 /* LaunchScreen.xib */; };
 		10F8E99F1B14B95F00802733 /* Out_of_this_WorldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F8E99E1B14B95F00802733 /* Out_of_this_WorldTests.m */; };
+		10F8E9AA1B14BB2100802733 /* OuterSpaceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F8E9A91B14BB2100802733 /* OuterSpaceTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +32,14 @@
 		10F8E9841B14B95F00802733 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		10F8E9861B14B95F00802733 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		10F8E9871B14B95F00802733 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		10F8E9891B14B95F00802733 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		10F8E98A1B14B95F00802733 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		10F8E98D1B14B95F00802733 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		10F8E98F1B14B95F00802733 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		10F8E9921B14B95F00802733 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		10F8E9981B14B95F00802733 /* Out of this WorldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Out of this WorldTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		10F8E99D1B14B95F00802733 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10F8E99E1B14B95F00802733 /* Out_of_this_WorldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Out_of_this_WorldTests.m; sourceTree = "<group>"; };
+		10F8E9A81B14BB2100802733 /* OuterSpaceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OuterSpaceTableViewController.h; sourceTree = "<group>"; };
+		10F8E9A91B14BB2100802733 /* OuterSpaceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OuterSpaceTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +83,9 @@
 			children = (
 				10F8E9861B14B95F00802733 /* AppDelegate.h */,
 				10F8E9871B14B95F00802733 /* AppDelegate.m */,
-				10F8E9891B14B95F00802733 /* ViewController.h */,
-				10F8E98A1B14B95F00802733 /* ViewController.m */,
 				10F8E98C1B14B95F00802733 /* Main.storyboard */,
+				10F8E9A81B14BB2100802733 /* OuterSpaceTableViewController.h */,
+				10F8E9A91B14BB2100802733 /* OuterSpaceTableViewController.m */,
 				10F8E98F1B14B95F00802733 /* Images.xcassets */,
 				10F8E9911B14B95F00802733 /* LaunchScreen.xib */,
 				10F8E9821B14B95F00802733 /* Supporting Files */,
@@ -219,7 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10F8E98B1B14B95F00802733 /* ViewController.m in Sources */,
+				10F8E9AA1B14BB2100802733 /* OuterSpaceTableViewController.m in Sources */,
 				10F8E9881B14B95F00802733 /* AppDelegate.m in Sources */,
 				10F8E9851B14B95F00802733 /* main.m in Sources */,
 			);
