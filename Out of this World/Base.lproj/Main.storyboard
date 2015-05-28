@@ -54,18 +54,40 @@
             </objects>
             <point key="canvasLocation" x="1644" y="456.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Planet Image View Controller-->
         <scene sceneID="f7L-rp-Gcx">
             <objects>
-                <viewController id="SkA-r3-Ebq" sceneMemberID="viewController">
+                <viewController id="SkA-r3-Ebq" customClass="PlanetImageViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Gyx-Du-cNL"/>
                         <viewControllerLayoutGuide type="bottom" id="gYD-tG-k2O"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Bal-45-5Hw">
+                    <view key="view" contentMode="scaleToFill" id="Bal-45-5Hw" customClass="Planet">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jhb-8G-rgS">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="64" width="400" height="736"/>
+                                </variation>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Jhb-8G-rgS"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Jhb-8G-rgS"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="scrollView" destination="Jhb-8G-rgS" id="tKK-HD-Kaz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KIB-q9-6M6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
