@@ -9,6 +9,7 @@
 #import "OuterSpaceTableViewController.h"
 #import "AstronomicalData.h"
 #import "Space Object.h"
+#import "PlanetImageViewController.h"
 
 @interface OuterSpaceTableViewController ()
 
@@ -57,9 +58,35 @@
 //    NSLog(@"%@", blueString);
     
 //    NSNumber *myNumber = [NSNumber numberWithInt:5]; //.............. wraps a primitive in an object
-    
-    
-    
+}
+
+// Method to pass data between views!!!
+// we look at the viewController we're passing into and its properties
+// then we set that property to the one from our current view
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // check to see if sender is UITableViewCell
+    // if the sender object that triggers our segue is a UITableViewCell
+    if ([sender isKindOfClass:[UITableViewCell class]])
+    {
+        // want to test the view controller we're going is the PlanetImageViewController class
+        if ([segue.destinationViewController isKindOfClass:[PlanetImageViewController class]])
+        {
+            // alows us to access the view controller we're going to
+            // also allows us to access the properties of the viewController we're going to
+            PlanetImageViewController *nextViewController = segue.destinationViewController;
+            
+            // find which sender from the table view is the sender!
+            // tableView property is automatically added because this is a tableViewController - grants us access
+            NSIndexPath *path = [self.tableView indexPathForCell:sender];
+            
+            // determines which object from the planets we want
+            Space_Object *selectedObject = self.planets[path.row];
+            
+            // sets the space object property from the TO viewController to the one from our list
+            nextViewController.spaceObject = selectedObject;
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning {
