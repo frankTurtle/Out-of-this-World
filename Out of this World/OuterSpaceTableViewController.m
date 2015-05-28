@@ -47,7 +47,7 @@
 //    NSString *blueString = [myDict objectForKey:@"ocean color"];
 //    NSLog(@"%@", blueString);
     
-    NSNumber *myNumber = [NSNumber numberWithInt:5];
+    NSNumber *myNumber = [NSNumber numberWithInt:5]; //.............. wraps a primitive in an object
     NSLog(@"%@", myNumber);
     
     
