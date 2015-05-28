@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PlanetImageViewController : UIViewController
+@interface PlanetImageViewController : UIViewController <UIScrollViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView; //.... hook up scroll view to storyboard
-@property (strong, nonatomic) UIImageView *imageView;
+@property (strong, nonatomic) UIImageView *imageView; //............... an imageView to drop ontop of the scroll view to display the planet
 
 @end

@@ -24,11 +24,26 @@
     
     // put imageview on top of scroll view
     [self.scrollView addSubview:self.imageView];
+    
+    // setup the view controller as the scroll views delegate
+    self.scrollView.delegate = self;
+    
+    // zooming wont work unless we make sure the max / min zoom scales are not the same thing
+    self.scrollView.maximumZoomScale = 2.0;
+    self.scrollView.minimumZoomScale = 0.5;
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+// DELEGATE method we're implementing for the scrollView
+// asking us which view should we zoom in on?
+-(UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
+{
+    return self.imageView;
 }
 
 /*
