@@ -101,6 +101,10 @@
     cell.detailTextLabel.text = planet.nickName; //............................................................ gives the secondary text on the label
     cell.imageView.image = planet.spaceImage; //............................................................... gives the cell's image the image from our planet
     
+    cell.backgroundColor = [UIColor clearColor]; //............................................................ sets the background color to clear in the cell
+    cell.textLabel.textColor = [UIColor whiteColor]; //........................................................ sets the labels text color to white
+    cell.detailTextLabel.textColor = [UIColor colorWithWhite:0.5 alpha:1.0]; //................................ changes the detail text color to a white with 1.0 alpha
+    
     return cell;
 }
 
