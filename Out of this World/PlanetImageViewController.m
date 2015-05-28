@@ -17,7 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Jupiter.jpg"]];
+    // sets tthe image based on our property spaceObject which is passed in from the sender object
+    self.imageView = [[UIImageView alloc] initWithImage: self.spaceObject.spaceImage];
     
     // contentsize of the scroll view is the same size as the frame of the image view
     self.scrollView.contentSize = self.imageView.frame.size;
