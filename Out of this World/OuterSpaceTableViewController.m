@@ -7,6 +7,8 @@
 //
 
 #import "OuterSpaceTableViewController.h"
+#import "AstronomicalData.h"
+#import "Space Object.h"
 
 @interface OuterSpaceTableViewController ()
 
@@ -23,12 +25,19 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    NSString *planet1 = @"Mercury";
-    NSString *planet2 = @"Venus";
-    NSString *planet3 = @"Earth";
-    NSString *planet4 = @"Uranus";
+//    NSString *planet1 = @"Mercury";
+//    NSString *planet2 = @"Venus";
+//    NSString *planet3 = @"Earth";
+//    NSString *planet4 = @"Uranus";
 
-    self.planets = [[NSMutableArray alloc] initWithObjects:planet1, planet2, planet3, planet4, nil];
+    self.planets = [[NSMutableArray alloc] init]; //......................................................................... initialize our planets array
+    
+    for (NSMutableDictionary *planetData in [AstronomicalData allKnownPlanets]) //........................................... loop through each dictionary in our Astronomical data array
+    {
+        NSString *imageName = [NSString stringWithFormat: @"%@.jpg", planetData[PLANET_NAME] ]; //........................... create a string with the planet name from each dictionary object
+        Space_Object *planet = [[Space_Object alloc] initWithData:planetData andImage:[UIImage imageNamed:imageName] ]; //... create a new space object and use our default initializer
+        [self.planets addObject: planet]; //................................................................................. populate our planets array with our new space object
+    }
     
 //    [self.planets addObject:planet1];
 //    [self.planets addObject:planet2];
@@ -76,16 +85,18 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
     // Configure the cell...
+//    
+//    cell.textLabel.text = [self.planets objectAtIndex:indexPath.row];
+//    
+//    if (indexPath.section == 0) {
+//        cell.backgroundColor = [UIColor redColor];
+//    }
+//    else
+//    {
+//        cell.backgroundColor = [UIColor blueColor];
+//    }
+
     
-    cell.textLabel.text = [self.planets objectAtIndex:indexPath.row];
-    
-    if (indexPath.section == 0) {
-        cell.backgroundColor = [UIColor redColor];
-    }
-    else
-    {
-        cell.backgroundColor = [UIColor blueColor];
-    }
     
     return cell;
 }
