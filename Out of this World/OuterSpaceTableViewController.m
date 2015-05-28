@@ -98,6 +98,7 @@
 
     Space_Object *planet = [self.planets objectAtIndex:indexPath.row]; //...................................... creates a space object from our planets array
     cell.textLabel.text = planet.name; //...................................................................... upddates the cell text to the name of the planet
+    cell.detailTextLabel.text = planet.nickName; //............................................................ gives the secondary text on the label
     
     return cell;
 }
