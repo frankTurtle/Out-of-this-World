@@ -96,7 +96,8 @@
 //        cell.backgroundColor = [UIColor blueColor];
 //    }
 
-    
+    Space_Object *planet = [self.planets objectAtIndex:indexPath.row]; //...................................... creates a space object from our planets array
+    cell.textLabel.text = planet.name; //...................................................................... upddates the cell text to the name of the planet
     
     return cell;
 }
