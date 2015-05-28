@@ -11,5 +11,6 @@
 @interface PlanetImageViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView; //.... hook up scroll view to storyboard
+@property (strong, nonatomic) UIImageView *imageView;
 
 @end

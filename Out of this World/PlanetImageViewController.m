@@ -16,7 +16,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Jupiter.jpg"]];
+    
+    // contentsize of the scroll view is the same size as the frame of the image view
+    self.scrollView.contentSize = self.imageView.frame.size;
+    
+    // put imageview on top of scroll view
+    [self.scrollView addSubview:self.imageView];
 }
 
 - (void)didReceiveMemoryWarning {
