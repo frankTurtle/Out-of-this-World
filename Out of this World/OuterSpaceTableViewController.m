@@ -35,17 +35,22 @@
     [self.planets addObject:planet3];
     [self.planets addObject:planet4];
     
-    // Dictionary fun
-    NSMutableDictionary *myDict = [[NSMutableDictionary alloc] init];
-    NSString *firstColor = @"red";
-    [myDict setObject:firstColor forKey:@"firetruck color"];
-    [myDict setObject:@"blue" forKey:@"ocean color"];
-    [myDict setObject:@"yellow" forKey:@"star color"];
+//    // Dictionary fun
+//    NSMutableDictionary *myDict = [[NSMutableDictionary alloc] init];
+//    NSString *firstColor = @"red";
+//    [myDict setObject:firstColor forKey:@"firetruck color"];
+//    [myDict setObject:@"blue" forKey:@"ocean color"];
+//    [myDict setObject:@"yellow" forKey:@"star color"];
+//    
+//    NSLog(@"%@", myDict);
+//    
+//    NSString *blueString = [myDict objectForKey:@"ocean color"];
+//    NSLog(@"%@", blueString);
     
-    NSLog(@"%@", myDict);
+    NSNumber *myNumber = [NSNumber numberWithInt:5];
+    NSLog(@"%@", myNumber);
     
-    NSString *blueString = [myDict objectForKey:@"ocean color"];
-    NSLog(@"%@", blueString);
+    
     
 }
 
