@@ -86,6 +86,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10489B851B17BD0A00D61AC0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				10F8E9F71B176DFB00802733 /* Space Object.h */,
+				10F8E9F81B176DFB00802733 /* Space Object.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		10F8E9761B14B95E00802733 = {
 			isa = PBXGroup;
 			children = (
@@ -110,10 +119,9 @@
 				10F8E9861B14B95F00802733 /* AppDelegate.h */,
 				10F8E9871B14B95F00802733 /* AppDelegate.m */,
 				10F8E98C1B14B95F00802733 /* Main.storyboard */,
-				10F8E9F71B176DFB00802733 /* Space Object.h */,
-				10F8E9F81B176DFB00802733 /* Space Object.m */,
 				10F8E9A81B14BB2100802733 /* OuterSpaceTableViewController.h */,
 				10F8E9A91B14BB2100802733 /* OuterSpaceTableViewController.m */,
+				10489B851B17BD0A00D61AC0 /* Model */,
 				10F8E98F1B14B95F00802733 /* Images.xcassets */,
 				10F8E9911B14B95F00802733 /* LaunchScreen.xib */,
 				10F8E9821B14B95F00802733 /* Supporting Files */,

@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--Outer Space Table View Controller-->
+        <!--Planets-->
         <scene sceneID="dPi-UF-d1w">
             <objects>
                 <tableViewController id="jan-Ws-QEt" customClass="OuterSpaceTableViewController" sceneMemberID="viewController">
@@ -45,7 +45,7 @@
                             <outlet property="delegate" destination="jan-Ws-QEt" id="M64-WX-YFW"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="fFh-ln-ugv"/>
+                    <navigationItem key="navigationItem" title="Planets" id="fFh-ln-ugv"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tti-xY-pcG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
