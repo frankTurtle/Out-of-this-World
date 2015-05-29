@@ -82,6 +82,10 @@
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="400" height="800"/>
                                 </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="1R5-ly-sQK" id="R2N-PC-eAs"/>
+                                    <outlet property="delegate" destination="1R5-ly-sQK" id="2H9-li-dbi"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
