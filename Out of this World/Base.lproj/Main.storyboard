@@ -186,6 +186,26 @@
                                     </mask>
                                 </variation>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mg-yy-oap">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addButtonPressed:" destination="8GQ-3n-YcA" eventType="touchUpInside" id="BVt-gx-4aJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7D-aj-8Hf">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="8GQ-3n-YcA" eventType="touchUpInside" id="E8s-Le-hbi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -193,12 +213,16 @@
                             <constraint firstItem="bJb-3S-pvN" firstAttribute="leading" secondItem="i21-s2-N2T" secondAttribute="leadingMargin" constant="43" id="Bym-bZ-InG"/>
                             <constraint firstItem="61u-EQ-ouD" firstAttribute="leading" secondItem="i21-s2-N2T" secondAttribute="leadingMargin" constant="43" id="C1B-DE-FDm"/>
                             <constraint firstItem="8oJ-9j-kL1" firstAttribute="top" secondItem="vQt-Jb-B6f" secondAttribute="bottom" constant="18" id="Dbg-yo-6p7"/>
+                            <constraint firstItem="6mg-yy-oap" firstAttribute="leading" secondItem="i21-s2-N2T" secondAttribute="leadingMargin" constant="73" id="LfU-lK-Iau"/>
                             <constraint firstItem="Mim-Nt-hIv" firstAttribute="leading" secondItem="i21-s2-N2T" secondAttribute="leadingMargin" constant="43" id="Vu4-tL-jcS"/>
                             <constraint firstItem="vQt-Jb-B6f" firstAttribute="leading" secondItem="i21-s2-N2T" secondAttribute="leadingMargin" constant="43" id="XpG-et-LaS"/>
+                            <constraint firstItem="O7D-aj-8Hf" firstAttribute="leading" secondItem="6mg-yy-oap" secondAttribute="trailing" constant="124" id="XpT-d0-4Jz"/>
                             <constraint firstItem="Mim-Nt-hIv" firstAttribute="top" secondItem="8oJ-9j-kL1" secondAttribute="bottom" constant="20" id="c4K-Ai-POf"/>
                             <constraint firstItem="61u-EQ-ouD" firstAttribute="top" secondItem="Mim-Nt-hIv" secondAttribute="bottom" constant="14" id="gz4-LL-7Lb"/>
                             <constraint firstItem="VMY-rP-E5Z" firstAttribute="leading" secondItem="i21-s2-N2T" secondAttribute="leadingMargin" constant="43" id="k6R-fk-BLP"/>
                             <constraint firstItem="VMY-rP-E5Z" firstAttribute="top" secondItem="bJb-3S-pvN" secondAttribute="bottom" constant="8" id="mD0-K3-RSu"/>
+                            <constraint firstAttribute="centerY" secondItem="O7D-aj-8Hf" secondAttribute="centerY" id="qDq-Ui-u1c"/>
+                            <constraint firstAttribute="centerY" secondItem="6mg-yy-oap" secondAttribute="centerY" id="rgM-Xm-8uH"/>
                             <constraint firstItem="vQt-Jb-B6f" firstAttribute="top" secondItem="6Gh-LU-VX0" secondAttribute="bottom" constant="8" id="scI-fG-3if"/>
                             <constraint firstItem="bJb-3S-pvN" firstAttribute="top" secondItem="61u-EQ-ouD" secondAttribute="bottom" constant="13" id="zTU-d1-Z3Z"/>
                         </constraints>
@@ -210,6 +234,8 @@
                                 <exclude reference="61u-EQ-ouD"/>
                                 <exclude reference="bJb-3S-pvN"/>
                                 <exclude reference="VMY-rP-E5Z"/>
+                                <exclude reference="6mg-yy-oap"/>
+                                <exclude reference="O7D-aj-8Hf"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="XpG-et-LaS"/>
@@ -224,6 +250,10 @@
                                 <exclude reference="zTU-d1-Z3Z"/>
                                 <exclude reference="k6R-fk-BLP"/>
                                 <exclude reference="mD0-K3-RSu"/>
+                                <exclude reference="LfU-lK-Iau"/>
+                                <exclude reference="rgM-Xm-8uH"/>
+                                <exclude reference="XpT-d0-4Jz"/>
+                                <exclude reference="qDq-Ui-u1c"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -234,6 +264,8 @@
                                 <include reference="61u-EQ-ouD"/>
                                 <include reference="bJb-3S-pvN"/>
                                 <include reference="VMY-rP-E5Z"/>
+                                <include reference="6mg-yy-oap"/>
+                                <include reference="O7D-aj-8Hf"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="XpG-et-LaS"/>
@@ -248,6 +280,10 @@
                                 <include reference="zTU-d1-Z3Z"/>
                                 <include reference="k6R-fk-BLP"/>
                                 <include reference="mD0-K3-RSu"/>
+                                <include reference="LfU-lK-Iau"/>
+                                <include reference="rgM-Xm-8uH"/>
+                                <include reference="XpT-d0-4Jz"/>
+                                <include reference="qDq-Ui-u1c"/>
                             </mask>
                         </variation>
                     </view>

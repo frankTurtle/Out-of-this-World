@@ -17,4 +17,6 @@
 @property (strong, nonatomic) IBOutlet UITextField *noOfMoonsTextField;
 @property (strong, nonatomic) IBOutlet UITextField *interestingFactTextField;
 
+- (IBAction)addButtonPressed:(id)sender;
+- (IBAction)cancelButtonPressed:(id)sender;
 @end
