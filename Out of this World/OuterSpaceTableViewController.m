@@ -134,6 +134,14 @@
     return cell;
 }
 
+#pragma mark UITableView Delegate
+
+// Method to manage the functionality for the accessory i button on each cell
+-(void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
+
 
 /*
 // Override to support conditional editing of the table view.
