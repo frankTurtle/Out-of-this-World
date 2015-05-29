@@ -82,7 +82,13 @@
             NSIndexPath *path = [self.tableView indexPathForCell:sender];
             
             // determines which object from the planets we want
-            Space_Object *selectedObject = self.planets[path.row];
+            Space_Object *selectedObject;
+            
+            // if its section 0 we need to user our planets array
+            if (path.section == 0)
+                selectedObject = self.planets[path.row];
+            else if (path.section == 1) //............................ if its not section 0 its one of the added ones
+                selectedObject = self.addedSpaceObjects[path.row];
             
             // sets the space object property from the TO viewController to the one from our list
             nextViewController.spaceObject = selectedObject;
@@ -96,7 +102,13 @@
         {
             SpaceDataViewController *targetViewController = segue.destinationViewController;
             NSIndexPath *path = sender;
-            Space_Object *selectedObject = self.planets[path.row];
+            Space_Object *selectedObject;
+            
+            if(path.section == 0)
+                selectedObject = self.planets[path.row];
+            else
+                selectedObject = self.addedSpaceObjects[path.row];
+            
             targetViewController.spaceObject = selectedObject;
         }
     }
