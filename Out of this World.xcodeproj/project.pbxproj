@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		10489B881B17BE8300D61AC0 /* PlanetImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10489B871B17BE8300D61AC0 /* PlanetImageViewController.m */; };
 		10F47B051B189DC1009B2EBA /* SpaceDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F47B041B189DC1009B2EBA /* SpaceDataViewController.m */; };
+		10F47B081B18BFD7009B2EBA /* AddSpaceObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F47B071B18BFD7009B2EBA /* AddSpaceObjectViewController.m */; };
 		10F8E9851B14B95F00802733 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F8E9841B14B95F00802733 /* main.m */; };
 		10F8E9881B14B95F00802733 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F8E9871B14B95F00802733 /* AppDelegate.m */; };
 		10F8E98E1B14B95F00802733 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10F8E98C1B14B95F00802733 /* Main.storyboard */; };
@@ -45,6 +46,8 @@
 		10489B871B17BE8300D61AC0 /* PlanetImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanetImageViewController.m; sourceTree = "<group>"; };
 		10F47B031B189DC1009B2EBA /* SpaceDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaceDataViewController.h; sourceTree = "<group>"; };
 		10F47B041B189DC1009B2EBA /* SpaceDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaceDataViewController.m; sourceTree = "<group>"; };
+		10F47B061B18BFD7009B2EBA /* AddSpaceObjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSpaceObjectViewController.h; sourceTree = "<group>"; };
+		10F47B071B18BFD7009B2EBA /* AddSpaceObjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSpaceObjectViewController.m; sourceTree = "<group>"; };
 		10F8E97F1B14B95F00802733 /* Out of this World.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Out of this World.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		10F8E9831B14B95F00802733 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10F8E9841B14B95F00802733 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -125,6 +128,8 @@
 				10F8E9861B14B95F00802733 /* AppDelegate.h */,
 				10F8E9871B14B95F00802733 /* AppDelegate.m */,
 				10F8E98C1B14B95F00802733 /* Main.storyboard */,
+				10F47B061B18BFD7009B2EBA /* AddSpaceObjectViewController.h */,
+				10F47B071B18BFD7009B2EBA /* AddSpaceObjectViewController.m */,
 				10489B861B17BE8300D61AC0 /* PlanetImageViewController.h */,
 				10489B871B17BE8300D61AC0 /* PlanetImageViewController.m */,
 				10F47B031B189DC1009B2EBA /* SpaceDataViewController.h */,
@@ -291,6 +296,7 @@
 				10F8E9881B14B95F00802733 /* AppDelegate.m in Sources */,
 				10489B881B17BE8300D61AC0 /* PlanetImageViewController.m in Sources */,
 				10F8E9851B14B95F00802733 /* main.m in Sources */,
+				10F47B081B18BFD7009B2EBA /* AddSpaceObjectViewController.m in Sources */,
 				10F8E9AD1B175DEC00802733 /* AstronomicalData.m in Sources */,
 				10F8E9F91B176DFB00802733 /* Space Object.m in Sources */,
 				10F47B051B189DC1009B2EBA /* SpaceDataViewController.m in Sources */,
