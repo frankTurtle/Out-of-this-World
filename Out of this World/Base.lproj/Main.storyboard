@@ -49,6 +49,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Planets" id="fFh-ln-ugv"/>
+                    <connections>
+                        <segue destination="1R5-ly-sQK" kind="show" identifier="push to space data" id="3BC-rG-eEu"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tti-xY-pcG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
