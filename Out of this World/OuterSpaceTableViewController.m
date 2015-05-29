@@ -111,12 +111,18 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 1;
+    if ([self.addedSpaceObjects count])
+        return 2;
+    else
+        return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return [self.planets count];
+    if (section == 1)
+        return [self.addedSpaceObjects count];
+    else
+        return [self.planets count];
 }
 
 
@@ -124,25 +130,22 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
     // Configure the cell...
-//    
-//    cell.textLabel.text = [self.planets objectAtIndex:indexPath.row];
-//    
-//    if (indexPath.section == 0) {
-//        cell.backgroundColor = [UIColor redColor];
-//    }
-//    else
-//    {
-//        cell.backgroundColor = [UIColor blueColor];
-//    }
-
-    Space_Object *planet = [self.planets objectAtIndex:indexPath.row]; //...................................... creates a space object from our planets array
-    cell.textLabel.text = planet.name; //...................................................................... upddates the cell text to the name of the planet
-    cell.detailTextLabel.text = planet.nickName; //............................................................ gives the secondary text on the label
-    cell.imageView.image = planet.spaceImage; //............................................................... gives the cell's image the image from our planet
+    if (indexPath.section == 1)
+    {
+        // use new spaceObject to customize cell
+    }
+    else
+    {
+        Space_Object *planet = [self.planets objectAtIndex:indexPath.row]; //...................................... creates a space object from our planets array
+        cell.textLabel.text = planet.name; //...................................................................... upddates the cell text to the name of the planet
+        cell.detailTextLabel.text = planet.nickName; //............................................................ gives the secondary text on the label
+        cell.imageView.image = planet.spaceImage; //............................................................... gives the cell's image the image from our planet
+    }
     
     cell.backgroundColor = [UIColor clearColor]; //............................................................ sets the background color to clear in the cell
     cell.textLabel.textColor = [UIColor whiteColor]; //........................................................ sets the labels text color to white
     cell.detailTextLabel.textColor = [UIColor colorWithWhite:0.5 alpha:1.0]; //................................ changes the detail text color to a white with 1.0 alpha
+    
     
     return cell;
 }
