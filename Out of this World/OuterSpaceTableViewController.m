@@ -10,6 +10,7 @@
 #import "AstronomicalData.h"
 #import "Space Object.h"
 #import "PlanetImageViewController.h"
+#import "SpaceDataViewController.h"
 
 @interface OuterSpaceTableViewController ()
 
@@ -85,6 +86,18 @@
             
             // sets the space object property from the TO viewController to the one from our list
             nextViewController.spaceObject = selectedObject;
+        }
+    }
+    
+    // CODE TO HANDLE THE INFORAMTION BUTTON PRESSED ON THE PLANET CELL
+    if ([sender isKindOfClass:[NSIndexPath class]])
+    {
+        if ([segue.destinationViewController isKindOfClass:[SpaceDataViewController class]])
+        {
+            SpaceDataViewController *targetViewController = segue.destinationViewController;
+            NSIndexPath *path = sender;
+            Space_Object *selectedObject = self.planets[path.row];
+            targetViewController.spaceObject = selectedObject;
         }
     }
 }
