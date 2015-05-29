@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8GQ-3n-YcA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NIL-S2-hpc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -49,7 +50,13 @@
                             <outlet property="delegate" destination="jan-Ws-QEt" id="M64-WX-YFW"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Planets" id="fFh-ln-ugv"/>
+                    <navigationItem key="navigationItem" title="Planets" id="fFh-ln-ugv">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="NwJ-Nz-MNC">
+                            <connections>
+                                <segue destination="8GQ-3n-YcA" kind="presentation" id="LTF-0W-gkm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="1R5-ly-sQK" kind="show" identifier="push to space data" id="3BC-rG-eEu"/>
                     </connections>
@@ -67,6 +74,7 @@
                         <viewControllerLayoutGuide type="bottom" id="mYr-xz-xcY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="i21-s2-N2T">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vQt-Jb-B6f">
@@ -238,18 +246,18 @@
                                 <exclude reference="O7D-aj-8Hf"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="XpG-et-LaS"/>
-                                <exclude reference="scI-fG-3if"/>
+                                <exclude reference="C1B-DE-FDm"/>
+                                <exclude reference="gz4-LL-7Lb"/>
                                 <exclude reference="1gT-Td-lok"/>
                                 <exclude reference="Dbg-yo-6p7"/>
                                 <exclude reference="Vu4-tL-jcS"/>
                                 <exclude reference="c4K-Ai-POf"/>
-                                <exclude reference="C1B-DE-FDm"/>
-                                <exclude reference="gz4-LL-7Lb"/>
-                                <exclude reference="Bym-bZ-InG"/>
-                                <exclude reference="zTU-d1-Z3Z"/>
                                 <exclude reference="k6R-fk-BLP"/>
                                 <exclude reference="mD0-K3-RSu"/>
+                                <exclude reference="Bym-bZ-InG"/>
+                                <exclude reference="zTU-d1-Z3Z"/>
+                                <exclude reference="XpG-et-LaS"/>
+                                <exclude reference="scI-fG-3if"/>
                                 <exclude reference="LfU-lK-Iau"/>
                                 <exclude reference="rgM-Xm-8uH"/>
                                 <exclude reference="XpT-d0-4Jz"/>
@@ -268,18 +276,18 @@
                                 <include reference="O7D-aj-8Hf"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="XpG-et-LaS"/>
-                                <include reference="scI-fG-3if"/>
+                                <include reference="C1B-DE-FDm"/>
+                                <include reference="gz4-LL-7Lb"/>
                                 <include reference="1gT-Td-lok"/>
                                 <include reference="Dbg-yo-6p7"/>
                                 <include reference="Vu4-tL-jcS"/>
                                 <include reference="c4K-Ai-POf"/>
-                                <include reference="C1B-DE-FDm"/>
-                                <include reference="gz4-LL-7Lb"/>
-                                <include reference="Bym-bZ-InG"/>
-                                <include reference="zTU-d1-Z3Z"/>
                                 <include reference="k6R-fk-BLP"/>
                                 <include reference="mD0-K3-RSu"/>
+                                <include reference="Bym-bZ-InG"/>
+                                <include reference="zTU-d1-Z3Z"/>
+                                <include reference="XpG-et-LaS"/>
+                                <include reference="scI-fG-3if"/>
                                 <include reference="LfU-lK-Iau"/>
                                 <include reference="rgM-Xm-8uH"/>
                                 <include reference="XpT-d0-4Jz"/>
