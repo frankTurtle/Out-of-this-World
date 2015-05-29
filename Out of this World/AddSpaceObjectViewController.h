@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Space Object.h"
 
 @protocol AddSpaceObjectViewControllerDelegate <NSObject>
 

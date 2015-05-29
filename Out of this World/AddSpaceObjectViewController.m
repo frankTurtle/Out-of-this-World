@@ -7,6 +7,7 @@
 //
 
 #import "AddSpaceObjectViewController.h"
+#import "Space Object.h"
 
 @interface AddSpaceObjectViewController ()
 
@@ -47,4 +48,20 @@
     // the didCancel logic is defined in the tableViewController
     [self.delegate didCancel];
 }
+
+// Method that will return a newSpaceObject based on values the user types in textFields
+- (Space_Object *)returnNewSpaceObject
+{
+    Space_Object *newSpaceObject = [[Space_Object alloc] init];
+    
+    newSpaceObject.name = self.nameTextField.text;
+    newSpaceObject.nickName = self.nicknameTextField.text;
+    newSpaceObject.diameter = [self.diametterTextField.text floatValue];
+    newSpaceObject.temperature = [self.tempTextField.text floatValue];
+    newSpaceObject.numberOfMoons = [self.noOfMoonsTextField.text intValue];
+    newSpaceObject.interestingFact = self.interestingFactTextField.text;
+    
+    return newSpaceObject;
+}
+
 @end
