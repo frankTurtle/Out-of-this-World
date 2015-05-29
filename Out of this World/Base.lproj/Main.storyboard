@@ -69,26 +69,6 @@
                     <view key="view" contentMode="scaleToFill" id="i21-s2-N2T">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTb-Ys-F2l">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Add">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="addButtonClicked:" destination="8GQ-3n-YcA" eventType="touchUpInside" id="nAb-b4-ZvG"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOA-q7-8bV">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Cancel">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="cancelButtonClicked:" destination="8GQ-3n-YcA" eventType="touchUpInside" id="U55-Zg-h6T"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vQt-Jb-B6f">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <constraints>
@@ -210,16 +190,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="8oJ-9j-kL1" firstAttribute="leading" secondItem="i21-s2-N2T" secondAttribute="leadingMargin" constant="43" id="1gT-Td-lok"/>
-                            <constraint firstItem="wTb-Ys-F2l" firstAttribute="leading" secondItem="i21-s2-N2T" secondAttribute="leadingMargin" constant="76" id="6p4-p3-h0u"/>
                             <constraint firstItem="bJb-3S-pvN" firstAttribute="leading" secondItem="i21-s2-N2T" secondAttribute="leadingMargin" constant="43" id="Bym-bZ-InG"/>
                             <constraint firstItem="61u-EQ-ouD" firstAttribute="leading" secondItem="i21-s2-N2T" secondAttribute="leadingMargin" constant="43" id="C1B-DE-FDm"/>
                             <constraint firstItem="8oJ-9j-kL1" firstAttribute="top" secondItem="vQt-Jb-B6f" secondAttribute="bottom" constant="18" id="Dbg-yo-6p7"/>
-                            <constraint firstAttribute="centerY" secondItem="wTb-Ys-F2l" secondAttribute="centerY" id="Oe1-Ho-eXa"/>
-                            <constraint firstItem="gOA-q7-8bV" firstAttribute="leading" secondItem="wTb-Ys-F2l" secondAttribute="trailing" constant="116" id="Uen-4O-EvK"/>
                             <constraint firstItem="Mim-Nt-hIv" firstAttribute="leading" secondItem="i21-s2-N2T" secondAttribute="leadingMargin" constant="43" id="Vu4-tL-jcS"/>
                             <constraint firstItem="vQt-Jb-B6f" firstAttribute="leading" secondItem="i21-s2-N2T" secondAttribute="leadingMargin" constant="43" id="XpG-et-LaS"/>
                             <constraint firstItem="Mim-Nt-hIv" firstAttribute="top" secondItem="8oJ-9j-kL1" secondAttribute="bottom" constant="20" id="c4K-Ai-POf"/>
-                            <constraint firstAttribute="centerY" secondItem="gOA-q7-8bV" secondAttribute="centerY" id="gCh-rM-jEW"/>
                             <constraint firstItem="61u-EQ-ouD" firstAttribute="top" secondItem="Mim-Nt-hIv" secondAttribute="bottom" constant="14" id="gz4-LL-7Lb"/>
                             <constraint firstItem="VMY-rP-E5Z" firstAttribute="leading" secondItem="i21-s2-N2T" secondAttribute="leadingMargin" constant="43" id="k6R-fk-BLP"/>
                             <constraint firstItem="VMY-rP-E5Z" firstAttribute="top" secondItem="bJb-3S-pvN" secondAttribute="bottom" constant="8" id="mD0-K3-RSu"/>
@@ -228,8 +204,6 @@
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="wTb-Ys-F2l"/>
-                                <exclude reference="gOA-q7-8bV"/>
                                 <exclude reference="vQt-Jb-B6f"/>
                                 <exclude reference="8oJ-9j-kL1"/>
                                 <exclude reference="Mim-Nt-hIv"/>
@@ -250,16 +224,10 @@
                                 <exclude reference="zTU-d1-Z3Z"/>
                                 <exclude reference="k6R-fk-BLP"/>
                                 <exclude reference="mD0-K3-RSu"/>
-                                <exclude reference="6p4-p3-h0u"/>
-                                <exclude reference="Oe1-Ho-eXa"/>
-                                <exclude reference="Uen-4O-EvK"/>
-                                <exclude reference="gCh-rM-jEW"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="wTb-Ys-F2l"/>
-                                <include reference="gOA-q7-8bV"/>
                                 <include reference="vQt-Jb-B6f"/>
                                 <include reference="8oJ-9j-kL1"/>
                                 <include reference="Mim-Nt-hIv"/>
@@ -280,15 +248,10 @@
                                 <include reference="zTU-d1-Z3Z"/>
                                 <include reference="k6R-fk-BLP"/>
                                 <include reference="mD0-K3-RSu"/>
-                                <include reference="6p4-p3-h0u"/>
-                                <include reference="Oe1-Ho-eXa"/>
-                                <include reference="Uen-4O-EvK"/>
-                                <include reference="gCh-rM-jEW"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="addButtonClicked" destination="wTb-Ys-F2l" id="b6z-4N-eUb"/>
                         <outlet property="diametterTextField" destination="Mim-Nt-hIv" id="GKQ-48-jmf"/>
                         <outlet property="interestingFactTextField" destination="VMY-rP-E5Z" id="tYZ-F2-eB1"/>
                         <outlet property="nameTextField" destination="vQt-Jb-B6f" id="z1R-BH-jPr"/>

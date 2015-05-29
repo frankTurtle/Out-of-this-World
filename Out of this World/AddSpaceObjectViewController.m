@@ -34,9 +34,4 @@
 }
 */
 
-- (IBAction)addButtonClicked:(id)sender {
-}
-
-- (IBAction)cancelButtonClicked:(id)sender {
-}
 @end

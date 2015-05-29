@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface AddSpaceObjectViewController : UIViewController
+
 @property (strong, nonatomic) IBOutlet UITextField *nameTextField;
 @property (strong, nonatomic) IBOutlet UITextField *nicknameTextField;
 @property (strong, nonatomic) IBOutlet UITextField *diametterTextField;
@@ -16,6 +17,4 @@
 @property (strong, nonatomic) IBOutlet UITextField *noOfMoonsTextField;
 @property (strong, nonatomic) IBOutlet UITextField *interestingFactTextField;
 
-- (IBAction)addButtonClicked:(id)sender;
-- (IBAction)cancelButtonClicked:(id)sender;
 @end
