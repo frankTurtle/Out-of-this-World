@@ -100,12 +100,36 @@
             targetViewController.spaceObject = selectedObject;
         }
     }
+    
+    if ([segue.destinationViewController isKindOfClass:[AddSpaceObjectViewController class]])
+    {
+        AddSpaceObjectViewController *addSpceObjectVC = segue.destinationViewController;
+        
+        // sets the property we created in the spaceObjectViewController ( the delegate ) to this view
+        // allows us to access it in that class
+        addSpceObjectVC.delegate = self;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - AddSpaceObjectViewControllerDelegate
+
+-(void)didCancel
+{
+    NSLog(@"Did cancel");
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)addSpaceObject
+{
+    NSLog(@"Space Object added");
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 #pragma mark - Table view data source
 
