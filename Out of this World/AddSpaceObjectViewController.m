@@ -36,9 +36,15 @@
 }
 */
 
-- (IBAction)addButtonPressed:(id)sender {
+- (IBAction)addButtonPressed:(id)sender
+{
+    [self.delegate addSpaceObject];
 }
 
-- (IBAction)cancelButtonPressed:(id)sender {
+- (IBAction)cancelButtonPressed:(id)sender
+{
+    // access the delegate property and call the didCancel method
+    // the didCancel logic is defined in the tableViewController
+    [self.delegate didCancel];
 }
 @end
