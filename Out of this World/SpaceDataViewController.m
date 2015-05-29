@@ -16,7 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.view.backgroundColor = [UIColor blackColor]; //.......... sets the views background to black
+    self.tableView.backgroundColor = [UIColor clearColor]; //..... sets the tableView's bg to clear
 }
 
 - (void)didReceiveMemoryWarning {
