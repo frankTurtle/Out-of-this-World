@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SpaceDataViewController : UIViewController
+@interface SpaceDataViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView; //.... new tableView
 
