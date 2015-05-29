@@ -139,7 +139,7 @@
 // Method to manage the functionality for the accessory i button on each cell
 -(void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
 {
-    
+    [self performSegueWithIdentifier:@"push to space data" sender:indexPath]; //.............................. manually configure a segue to the spaceDataView
 }
 
 
