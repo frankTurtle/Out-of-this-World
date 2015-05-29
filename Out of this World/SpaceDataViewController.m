@@ -34,14 +34,59 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier
                                                             forIndexPath:indexPath]; //................. creates a tableViewCell, checks the storyboard for a cell named DataCell ( set this in Storyboard )
     
-    cell.textLabel.text = @"Data"; //................................................................... hard coded label for the cell
+    // populate each row with data from the spaceObject properties
+    switch (indexPath.row)
+    {
+        case 0:
+            cell.textLabel.text = @"Nickname :";
+            cell.detailTextLabel.text = self.spaceObject.nickName;
+            break;
+            
+        case 1:
+            cell.textLabel.text = @"Diameter (km) :";
+            cell.detailTextLabel.text = [NSString stringWithFormat:@"%f", self.spaceObject.diameter];
+            break;
+            
+        case 2:
+            cell.textLabel.text = @"Gravitational Force";
+            cell.detailTextLabel.text = [NSString stringWithFormat:@"%f",self.spaceObject.gravitionalForce];
+            break;
+            
+        case 3:
+            cell.textLabel.text = @"Length of Year in days:";
+            cell.detailTextLabel.text = [NSString stringWithFormat:@"%f",self.spaceObject.yearLength];
+            break;
+            
+        case 4:
+            cell.textLabel.text = @"Length of Day:";
+            cell.detailTextLabel.text = [NSString stringWithFormat:@"%f",self.spaceObject.dayLength];
+            break;
+            
+        case 5:
+            cell.textLabel.text = @"Temperature:";
+            cell.detailTextLabel.text = [NSString stringWithFormat:@"%f",self.spaceObject.temperature];
+            break;
+            
+        case 6:
+            cell.textLabel.text = @"Number of Moons:";
+            cell.detailTextLabel.text = [NSString stringWithFormat:@"%i",self.spaceObject.numberOfMoons];
+            break;
+            
+        case 7:
+            cell.textLabel.text = @"Interesting Fact:";
+            cell.detailTextLabel.text = self.spaceObject.interestingFact;
+            break;
+        
+        default:
+            break;
+    }
     
     return cell; //..................................................................................... return the cell
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return 8;
 }
 
 /*
