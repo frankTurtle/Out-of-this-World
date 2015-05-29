@@ -136,6 +136,9 @@
     
     NSLog(@"Space Object added");
     [self dismissViewControllerAnimated:YES completion:nil];
+    
+    // check to see if it should update with new data
+    [self.tableView reloadData];
 }
 
 
