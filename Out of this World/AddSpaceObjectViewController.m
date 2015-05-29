@@ -39,7 +39,11 @@
 
 - (IBAction)addButtonPressed:(id)sender
 {
-    [self.delegate addSpaceObject];
+    // create a new space object using the helper method
+    Space_Object *newSpaceObject = [self returnNewSpaceObject];
+    
+    // pass it back
+    [self.delegate addSpaceObject:newSpaceObject];
 }
 
 - (IBAction)cancelButtonPressed:(id)sender

@@ -15,7 +15,7 @@
 @required
 
 // both methods will be implemented in the OuterSpaceTableViewController
--(void)addSpaceObject;
+-(void)addSpaceObject:(Space_Object *)spaceObject;
 -(void)didCancel;
 
 @end

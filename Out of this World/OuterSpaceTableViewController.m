@@ -124,8 +124,16 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
--(void)addSpaceObject
+// Method to handle when we want to add a new spaceObject to the list
+-(void)addSpaceObject:(Space_Object *)spaceObject
 {
+    // if the array addedSpaceObjects does not exits create it
+    if (!self.addedSpaceObjects)
+        self.addedSpaceObjects = [[NSMutableArray alloc] init];
+    
+    // add the spaceObject that's passed in when the protocol is called
+    [self.addedSpaceObjects addObject:spaceObject];
+    
     NSLog(@"Space Object added");
     [self dismissViewControllerAnimated:YES completion:nil];
 }
