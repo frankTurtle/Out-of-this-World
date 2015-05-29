@@ -65,6 +65,10 @@
     newSpaceObject.numberOfMoons = [self.noOfMoonsTextField.text intValue];
     newSpaceObject.interestingFact = self.interestingFactTextField.text;
     
+    //TODO: change default image
+    // placeholder image
+    newSpaceObject.spaceImage = [UIImage imageNamed:@"EinsteinRing.jpg"];
+    
     return newSpaceObject;
 }
 

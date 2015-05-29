@@ -170,6 +170,7 @@
         Space_Object *planet = [self.addedSpaceObjects objectAtIndex:indexPath.row];
         cell.textLabel.text = planet.name;
         cell.detailTextLabel.text = planet.nickName;
+        cell.imageView.image = planet.spaceImage;
     }
     else
     {
