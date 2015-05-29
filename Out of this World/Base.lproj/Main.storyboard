@@ -54,6 +54,45 @@
             </objects>
             <point key="canvasLocation" x="1644" y="456.75"/>
         </scene>
+        <!--Space Data View Controller-->
+        <scene sceneID="CkY-Of-FXa">
+            <objects>
+                <viewController id="1R5-ly-sQK" customClass="SpaceDataViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nEX-MN-QJP"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ivm-Gx-dTg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wbk-13-NAG">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="0hE-he-Spt">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="800"/>
+                                </variation>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="0hE-he-Spt"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="0hE-he-Spt"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="0hE-he-Spt" id="Wu8-IK-yUG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Byb-fX-0ks" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2427" y="681"/>
+        </scene>
         <!--Planet Image View Controller-->
         <scene sceneID="f7L-rp-Gcx">
             <objects>
@@ -91,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KIB-q9-6M6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2382" y="456.75"/>
+            <point key="canvasLocation" x="2427" y="17.25"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xeM-v6-c8x">
