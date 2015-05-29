@@ -167,7 +167,9 @@
     // Configure the cell...
     if (indexPath.section == 1)
     {
-        // use new spaceObject to customize cell
+        Space_Object *planet = [self.addedSpaceObjects objectAtIndex:indexPath.row];
+        cell.textLabel.text = planet.name;
+        cell.detailTextLabel.text = planet.nickName;
     }
     else
     {
