@@ -146,11 +146,21 @@
     // add the spaceObject that's passed in when the protocol is called
     [self.addedSpaceObjects addObject:spaceObject];
     
+    //TODO: Save to NSUSerDefaults here
+    
     NSLog(@"Space Object added");
     [self dismissViewControllerAnimated:YES completion:nil];
     
     // check to see if it should update with new data
     [self.tableView reloadData];
+}
+
+#pragma mark - Helper methods
+
+// Method to create an dictionary out of the spaceObject
+-(NSDictionary *)spaceObjectAsAPropertyList:(Space_Object *)spaceObject
+{
+    
 }
 
 
