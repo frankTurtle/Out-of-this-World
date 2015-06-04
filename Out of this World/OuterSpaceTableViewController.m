@@ -153,6 +153,17 @@
     // makes it mutable so that we can add / subtract as necessary
     NSMutableArray *spaceObjectsAsPropertyLists = [[[NSUserDefaults standardUserDefaults] arrayForKey:ADDED_SPACE_OBJECTS_KEY] mutableCopy];
     
+    // make sure spaceObjectsAsPropertyLists is a thing, if not it creates it
+    if (!spaceObjectsAsPropertyLists)
+        spaceObjectsAsPropertyLists = [[NSMutableArray alloc] init];
+    
+    // add spaceObjects to array
+    [spaceObjectsAsPropertyLists addObject:[self spaceObjectAsAPropertyList:spaceObject]];
+    
+    // save to NSUserDefaults
+    [[NSUserDefaults standardUserDefaults] setObject:spaceObjectsAsPropertyLists forKey:ADDED_SPACE_OBJECTS_KEY];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
     NSLog(@"Space Object added");
     [self dismissViewControllerAnimated:YES completion:nil];
     
