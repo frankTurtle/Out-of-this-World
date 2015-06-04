@@ -43,6 +43,17 @@
         [self.planets addObject: planet]; //................................................................................. populate our planets array with our new space object
     }
     
+    NSArray *myPlanetsAsPropertyLists = [[NSUserDefaults standardUserDefaults] arrayForKey:ADDED_SPACE_OBJECTS_KEY];
+    
+    // loops through each dictinary in myPlanetsAsPropertyLists created above
+    // each interation creates a new spaceObjectDictionary using the helper method
+    // adds the new spaceObjectDictionary object to the array addedSpaceObjects in order to display it in the tableView
+    for (NSDictionary *dict in myPlanetsAsPropertyLists)
+    {
+        Space_Object *spaceObject = [self spaceObjectForDictionary:dict];
+        [self.addedSpaceObjects addObject:spaceObject];
+    }
+    
 //    [self.planets addObject:planet1];
 //    [self.planets addObject:planet2];
 //    [self.planets addObject:planet3];
