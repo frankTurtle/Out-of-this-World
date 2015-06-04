@@ -18,6 +18,8 @@
 
 @implementation OuterSpaceTableViewController
 
+#define ADDED_SPACE_OBJECTS_KEY @"Added Space Objects Array"
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -147,6 +149,9 @@
     [self.addedSpaceObjects addObject:spaceObject];
     
     //TODO: Save to NSUSerDefaults here
+    // gives the standardUsersDefault array with they key ADDED_SPACE_OBJECTS_KEY
+    // makes it mutable so that we can add / subtract as necessary
+    NSMutableArray *spaceObjectsAsPropertyLists = [[[NSUserDefaults standardUserDefaults] arrayForKey:ADDED_SPACE_OBJECTS_KEY] mutableCopy];
     
     NSLog(@"Space Object added");
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -174,7 +179,7 @@
                                      PLANET_INTERESTING_FACT :  spaceObject.interestingFact,
                                      PLANET_IMAGE :             imageData
                                  };
-                                 
+    
     return dictionary;
 }
 
