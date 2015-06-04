@@ -208,7 +208,10 @@
 // user our custom initializer to create a spaceObject with our dictionary
 -(Space_Object *)spaceObjectForDictionary:(NSDictionary *)dictionaryIn
 {
-    Space_Object *spaceObject = [[Space_Object alloc] initWithData:dictionaryIn andImage:[UIImage imageNamed:@"EinsteinRing.jpg"]];
+    NSData *dataForImage = dictionaryIn[PLANET_IMAGE]; //............ converts the image into data
+    UIImage *spaceObjectImage = [UIImage imageWithData:dataForImage];
+    
+    Space_Object *spaceObject = [[Space_Object alloc] initWithData:dictionaryIn andImage:spaceObjectImage];
     return spaceObject;
 }
 
