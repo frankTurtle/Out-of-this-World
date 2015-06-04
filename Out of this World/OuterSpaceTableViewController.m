@@ -271,25 +271,46 @@
 }
 
 
-/*
+
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (indexPath.section == 1)
+        return YES;
+    
     // Return NO if you do not want the specified item to be editable.
-    return YES;
+    return NO;
 }
-*/
 
-/*
+
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
         // Delete the row from the data source
+        
+        [self.addedSpaceObjects removeObjectAtIndex:indexPath.row]; //.................................... removes the object at the index where the user swipes
+        
+        NSMutableArray *newSavedSpaceObjectData = [[NSMutableArray alloc] init]; //....................... creates a new mutable array to hold the objects minus the one we just removed
+        
+        // loops through each object in the array list
+        // ads each object from the addedSpaceObjects array to the newSavedSpaceObjectsData array
+        for( Space_Object *spaceObject in self.addedSpaceObjects )
+            [newSavedSpaceObjectData addObject:[self spaceObjectAsAPropertyList:spaceObject]];
+        
+        [[NSUserDefaults standardUserDefaults] setObject:newSavedSpaceObjectData forKey:ADDED_SPACE_OBJECTS_KEY]; //.... updates the NSUserDefaults data with the new array
+        [[NSUserDefaults standardUserDefaults] synchronize]; //......................................................... resyncs the NSUserDefaults
+        
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+    }
+    
+    else if (editingStyle == UITableViewCellEditingStyleInsert)
+    {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
+
 
 /*
 // Override to support rearranging the table view.
