@@ -160,17 +160,22 @@
 // Method to create an dictionary out of the spaceObject
 -(NSDictionary *)spaceObjectAsAPropertyList:(Space_Object *)spaceObject
 {
-    NSDictionary *dictionary = @{PLANET_NAME :              spaceObject.name,
-                                 PLANET_GRAVITY :         @(spaceObject.gravitionalForce),
-                                 PLANET_DIAMETER :        @(spaceObject.diameter),
-                                 PLANET_YEAR_LENGTH :     @(spaceObject.yearLength),
-                                 PLANET_DAY_LENGTH :      @(spaceObject.dayLength),
-                                 PLANET_TEMPERATURE :     @(spaceObject.temperature),
-                                 PLANET_NUMBER_OF_MOONS : @(spaceObject.numberOfMoons),
-                                 PLANET_NICKNAME :          spaceObject.nickName,
-                                 PLANET_INTERESTING_FACT :  spaceObject.interestingFact};
+    NSData *imageData = UIImagePNGRepresentation(spaceObject.spaceImage); //.................... PNG representation of the image
     
-    return dictionary;           
+    NSDictionary *dictionary = @{
+                                     PLANET_NAME :              spaceObject.name,
+                                     PLANET_GRAVITY :         @(spaceObject.gravitionalForce),
+                                     PLANET_DIAMETER :        @(spaceObject.diameter),
+                                     PLANET_YEAR_LENGTH :     @(spaceObject.yearLength),
+                                     PLANET_DAY_LENGTH :      @(spaceObject.dayLength),
+                                     PLANET_TEMPERATURE :     @(spaceObject.temperature),
+                                     PLANET_NUMBER_OF_MOONS : @(spaceObject.numberOfMoons),
+                                     PLANET_NICKNAME :          spaceObject.nickName,
+                                     PLANET_INTERESTING_FACT :  spaceObject.interestingFact,
+                                     PLANET_IMAGE :             imageData
+                                 };
+                                 
+    return dictionary;
 }
 
 
