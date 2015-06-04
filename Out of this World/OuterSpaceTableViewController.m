@@ -194,6 +194,13 @@
     return dictionary;
 }
 
+// user our custom initializer to create a spaceObject with our dictionary
+-(Space_Object *)spaceObjectForDictionary:(NSDictionary *)dictionaryIn
+{
+    Space_Object *spaceObject = [[Space_Object alloc] initWithData:dictionaryIn andImage:[UIImage imageNamed:@"EinsteinRing.jpg"]];
+    return spaceObject;
+}
+
 
 #pragma mark - Table view data source
 
